@@ -1,10 +1,6 @@
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 /**
- *Please note, this code has dependency on jquery cookie plugin, which comes bundled with bp-default theme and most of the buddypress theme
- *If you theme does not have it, please copy it from bp-default/_inc/global.js and paste in your js file
+ * Please note, this code has dependency on jquery cookie plugin, which comes bundled with bp-default theme and most of the buddypress theme
+ * If you theme does not have it, please copy it from bp-default/_inc/global.js and paste in your js file
  **/
 
 jQuery(document).ready( function() {
@@ -25,7 +21,7 @@ jQuery(document).ready( function() {
         //find the offset of the button
          var pos=load_more_btn.offset();
        
-       //if the window height+scrollTop is greater than the offset top, we ahve reached the button, let us load more activity
+       //if the window height+scrollTop is greater than the offset top, we have reached the button, let us load more activity
      
      
        if(jq(window).scrollTop() + jq(window).height() > pos.top ) {
