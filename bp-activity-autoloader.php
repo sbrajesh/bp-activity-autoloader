@@ -5,7 +5,7 @@
  * Author: Brajesh Singh(BuddyDev)
  * Author URI: http://buddydev.com/members/sbrajesh/
  * Version: 1.0
- * Description: Autoload Activity When the end of the activities is reached
+ * Description: Autoload next page of the BuddyPress Activity Stream when the end of the current page is reached
  */
 
 //just trying to recreate the magic, should we?
