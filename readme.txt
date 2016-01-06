@@ -1,9 +1,9 @@
 === BuddyPress Activity Autoloader ===
 Contributors: sbrajesh,buddydev,anusharma
 Tags: buddypress, activity, autoloader
-Requires at least: BuddyPress 1.7
-Tested up to: BuddyPress 1.8.1
-Stable tag: 1.0
+Requires at least: BuddyPress 2.0
+Tested up to: BuddyPress 2.4.3
+Stable tag: 1.0.2
 License: GPLv2 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
