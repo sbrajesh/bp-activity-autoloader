@@ -3,7 +3,7 @@ Contributors: sbrajesh,buddydev,anusharma
 Tags: buddypress, activity, autoloader
 Requires at least: BuddyPress 2.0
 Tested up to: BuddyPress 2.4.3
-Stable tag: 1.0.2
+Stable tag: 2.0.0
 License: GPLv2 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,7 +19,7 @@ BuddyPress Activity Autoloader plugin autoload activities when a user reaches at
 Autoload activities when a user reaches at the bottom of the page. It just simulates facebook like infinite activity auto loading with BuddyPress.
 
 = Help & Support =
-Please use BuddyDev support forums [BuddyDev](http://buddydev.com/support/forums/) for any suggestions, support request.
+Please use BuddyDev support forums [BuddyDev](https://buddydev.com/support/forums/) for any suggestion, support request.
 
 
 == Installation ==
@@ -42,6 +42,11 @@ No, It needs you to have BuddyPress Installed and activated
 1. No screenshots
 
 == Changelog ==
+
+= 2.0.0 =
+* Complete rewrite
+* No manual loading of activities. Simply trigger click on the load more.
+* Works with BP Legacy and BP Nouveau template pack. Should work with any theme/plugin now.
 
 = 1.0.2 =
 Add filter 'bp_activity_autoloader_disabled' to allow disabling it on mobile browsers

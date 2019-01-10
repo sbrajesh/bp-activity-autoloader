@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name: BuddyPress Activity Autoloader
- * Plugin URI: http://buddydev.com/plugins/bp-activity-autoloader/
+ * Plugin URI: https://buddydev.com/plugins/bp-activity-autoloader/
  * Author: Brajesh Singh(BuddyDev)
- * Author URI: http://buddydev.com/members/sbrajesh/
- * Version: 2.0
+ * Author URI: https://buddydev.com/members/sbrajesh/
+ * Version: 2.0.0
  * Description: Autoload next page of the BuddyPress Activity Stream when the end of the current page is reached
  */
 
