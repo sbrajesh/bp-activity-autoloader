@@ -22,76 +22,10 @@ jQuery( document ).ready( function() {
           
        if( jq( window ).scrollTop() + jq( window ).height() > pos.top ) {
            
-            load_more_activity();
+            load_more_btn.trigger('click');
        }
     
     });
-    
-    
-    /**
-     * This routine loads more activity.
-     * We call it whenever we reach the bottom of the activity listing.
-     * 
-     */
-    function load_more_activity() {
-        //Check if activity is loading, which means another request is already doing this.
-        //If yes, just return and let the other request handle it.
-            if( is_activity_loading ) {
-                    return false;	
-			}
-           //So, it is a new request, let us set the var to true.        
-            is_activity_loading = true;
-			
-			var $parent = jq('#content');
-			if( ! $parent.get(0) ) {
-				$parent = jq( '#buddypress' );
-			}
-			
-			if( ! $parent ) {
-				return ;
-			}
-            //Add loading class to "load more" button.
-            //Theme authors may need to change the selector if their theme uses a different id for the content container.
-            //This is designed to work with the structure of bp-default/derivative themes.
-            //Change #content to whatever you have named the content container in your theme.
-            $parent.find( 'li.load-more' ).addClass( 'loading' );
-
-            if ( null == jq.cookie( 'bp-activity-oldestpage' ) ) {
-                    jq.cookie( 'bp-activity-oldestpage', 1, {
-                            path: '/'
-                    } );
-			}
-
-            var oldest_page = ( jq.cookie( 'bp-activity-oldestpage' ) * 1 ) + 1;
-			
-					
-            //Send the ajax request.
-            jq.post( ajaxurl, {
-                    action: 'activity_get_older_updates',
-                    cookie: encodeURIComponent(document.cookie),
-                    page: oldest_page
-            },
-            function( response )
-            {
-                    $parent.find( '.load-more' ).hide();//Hide any "load more" button.
-                    $parent.find( 'li.load-more' ).removeClass( 'loading' );//Theme authors, you may need to change #content to the id of your container here, too.
-                    
-                    //Update cookie...
-
-                    
-                    //and append the response.
-                    $parent.find( 'ul.activity-list' ).append( response.contents );
-					jq.cookie( 'bp-activity-oldestpage', oldest_page, {
-                            path: '/'
-                    } );
-                    //Since the request is complete, let us reset is_activity_loading to false, so we'll be ready to run the routine again.
-                    
-                    is_activity_loading = false;
-            }, 'json' );
-
-            return false;
-    }
- 
 
 } );//end of dom ready
 
